@@ -12,17 +12,21 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "slug": {
       "type": "uid",
-      "targetField": "title"
+      "targetField": "title",
+      "required": true
     },
     "description": {
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "constructionType": {
       "type": "enumeration",
+      "required": true,
       "enum": [
         "single-level",
         "double-decker"
@@ -30,25 +34,34 @@
     },
     "eventType": {
       "type": "enumeration",
+      "required": true,
       "enum": [
         "exhibition",
         "event"
       ]
     },
     "eventName": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "eventDate": {
-      "type": "date"
+      "type": "date",
+      "required": true
     },
     "firstFloorSize": {
-      "type": "integer"
+      "type": "integer",
+      "required": true
     },
     "secondFloorSize": {
       "type": "integer"
     },
     "totalSize": {
-      "type": "integer"
+      "type": "integer",
+      "required": true
+    },
+    "referringCompany": {
+      "type": "string",
+      "required": false
     },
     "client": {
       "type": "relation",
@@ -58,6 +71,7 @@
     "images": {
       "type": "media",
       "multiple": true,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",

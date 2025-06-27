@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-06-25T21:52:36.278Z"
+    "x-generation-date": "2025-06-27T13:02:44.232Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -2509,6 +2509,10 @@
         ],
         "properties": {
           "data": {
+            "required": [
+              "name",
+              "slug"
+            ],
             "type": "object",
             "properties": {
               "name": {
@@ -2575,6 +2579,10 @@
       },
       "Client": {
         "type": "object",
+        "required": [
+          "name",
+          "slug"
+        ],
         "properties": {
           "id": {
             "type": "number"
@@ -2968,6 +2976,18 @@
         ],
         "properties": {
           "data": {
+            "required": [
+              "title",
+              "slug",
+              "description",
+              "constructionType",
+              "eventType",
+              "eventName",
+              "eventDate",
+              "firstFloorSize",
+              "totalSize",
+              "images"
+            ],
             "type": "object",
             "properties": {
               "title": {
@@ -3008,6 +3028,9 @@
               },
               "totalSize": {
                 "type": "integer"
+              },
+              "referringCompany": {
+                "type": "string"
               },
               "client": {
                 "oneOf": [
@@ -3092,6 +3115,18 @@
       },
       "Project": {
         "type": "object",
+        "required": [
+          "title",
+          "slug",
+          "description",
+          "constructionType",
+          "eventType",
+          "eventName",
+          "eventDate",
+          "firstFloorSize",
+          "totalSize",
+          "images"
+        ],
         "properties": {
           "id": {
             "type": "number"
@@ -3137,6 +3172,9 @@
           },
           "totalSize": {
             "type": "integer"
+          },
+          "referringCompany": {
+            "type": "string"
           },
           "client": {
             "type": "object",
@@ -3893,6 +3931,9 @@
                 },
                 "totalSize": {
                   "type": "integer"
+                },
+                "referringCompany": {
+                  "type": "string"
                 },
                 "client": {
                   "type": "object",

@@ -430,9 +430,9 @@ export interface ApiClientClient extends Struct.CollectionTypeSchema {
       'api::client.client'
     > &
       Schema.Attribute.Private;
-    name: Schema.Attribute.String;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
-    slug: Schema.Attribute.UID<'name'>;
+    slug: Schema.Attribute.UID<'name'> & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -453,19 +453,22 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     client: Schema.Attribute.Relation<'oneToOne', 'api::client.client'>;
     constructionType: Schema.Attribute.Enumeration<
       ['single-level', 'double-decker']
-    >;
+    > &
+      Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    description: Schema.Attribute.Text;
-    eventDate: Schema.Attribute.Date;
-    eventName: Schema.Attribute.String;
-    eventType: Schema.Attribute.Enumeration<['exhibition', 'event']>;
-    firstFloorSize: Schema.Attribute.Integer;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    eventDate: Schema.Attribute.Date & Schema.Attribute.Required;
+    eventName: Schema.Attribute.String & Schema.Attribute.Required;
+    eventType: Schema.Attribute.Enumeration<['exhibition', 'event']> &
+      Schema.Attribute.Required;
+    firstFloorSize: Schema.Attribute.Integer & Schema.Attribute.Required;
     images: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
-    >;
+    > &
+      Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -473,10 +476,11 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    referringCompany: Schema.Attribute.String;
     secondFloorSize: Schema.Attribute.Integer;
-    slug: Schema.Attribute.UID<'title'>;
-    title: Schema.Attribute.String;
-    totalSize: Schema.Attribute.Integer;
+    slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    totalSize: Schema.Attribute.Integer & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

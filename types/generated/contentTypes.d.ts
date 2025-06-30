@@ -424,6 +424,7 @@ export interface ApiClientClient extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -458,7 +459,6 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    description: Schema.Attribute.Text & Schema.Attribute.Required;
     eventDate: Schema.Attribute.Date & Schema.Attribute.Required;
     eventName: Schema.Attribute.String & Schema.Attribute.Required;
     eventType: Schema.Attribute.Enumeration<['exhibition', 'event']> &
@@ -478,8 +478,6 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     referringCompany: Schema.Attribute.String;
     secondFloorSize: Schema.Attribute.Integer;
-    slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
-    title: Schema.Attribute.String & Schema.Attribute.Required;
     totalSize: Schema.Attribute.Integer & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

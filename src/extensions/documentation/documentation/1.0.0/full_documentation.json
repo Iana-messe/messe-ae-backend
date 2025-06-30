@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-06-27T13:02:44.232Z"
+    "x-generation-date": "2025-06-30T13:16:44.181Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -2511,7 +2511,8 @@
           "data": {
             "required": [
               "name",
-              "slug"
+              "slug",
+              "description"
             ],
             "type": "object",
             "properties": {
@@ -2519,6 +2520,9 @@
                 "type": "string"
               },
               "slug": {
+                "type": "string"
+              },
+              "description": {
                 "type": "string"
               },
               "locale": {
@@ -2581,7 +2585,8 @@
         "type": "object",
         "required": [
           "name",
-          "slug"
+          "slug",
+          "description"
         ],
         "properties": {
           "id": {
@@ -2594,6 +2599,9 @@
             "type": "string"
           },
           "slug": {
+            "type": "string"
+          },
+          "description": {
             "type": "string"
           },
           "createdAt": {
@@ -2902,6 +2910,9 @@
                 "slug": {
                   "type": "string"
                 },
+                "description": {
+                  "type": "string"
+                },
                 "createdAt": {
                   "type": "string",
                   "format": "date-time"
@@ -2977,9 +2988,6 @@
         "properties": {
           "data": {
             "required": [
-              "title",
-              "slug",
-              "description",
               "constructionType",
               "eventType",
               "eventName",
@@ -2990,15 +2998,6 @@
             ],
             "type": "object",
             "properties": {
-              "title": {
-                "type": "string"
-              },
-              "slug": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
               "constructionType": {
                 "type": "string",
                 "enum": [
@@ -3116,9 +3115,6 @@
       "Project": {
         "type": "object",
         "required": [
-          "title",
-          "slug",
-          "description",
           "constructionType",
           "eventType",
           "eventName",
@@ -3132,15 +3128,6 @@
             "type": "number"
           },
           "documentId": {
-            "type": "string"
-          },
-          "title": {
-            "type": "string"
-          },
-          "slug": {
-            "type": "string"
-          },
-          "description": {
             "type": "string"
           },
           "constructionType": {
@@ -3189,6 +3176,9 @@
                 "type": "string"
               },
               "slug": {
+                "type": "string"
+              },
+              "description": {
                 "type": "string"
               },
               "createdAt": {
@@ -3891,15 +3881,6 @@
                   "type": "number"
                 },
                 "documentId": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "slug": {
-                  "type": "string"
-                },
-                "description": {
                   "type": "string"
                 },
                 "constructionType": {

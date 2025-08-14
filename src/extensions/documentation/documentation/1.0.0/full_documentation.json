@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-07-02T16:01:10.399Z"
+    "x-generation-date": "2025-08-14T08:36:47.830Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -3670,9 +3670,6 @@
               "description": {
                 "type": "string"
               },
-              "test": {
-                "type": "string"
-              },
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -4622,9 +4619,6 @@
               "description": {
                 "type": "string"
               },
-              "test": {
-                "type": "string"
-              },
               "locale": {
                 "type": "string"
               },
@@ -4702,9 +4696,6 @@
             "type": "string"
           },
           "description": {
-            "type": "string"
-          },
-          "test": {
             "type": "string"
           },
           "createdAt": {
@@ -5016,9 +5007,6 @@
                 "description": {
                   "type": "string"
                 },
-                "test": {
-                  "type": "string"
-                },
                 "createdAt": {
                   "type": "string",
                   "format": "date-time"
@@ -5109,6 +5097,9 @@
               "description": {
                 "type": "string"
               },
+              "link": {
+                "type": "string"
+              },
               "locale": {
                 "type": "string"
               },
@@ -5186,6 +5177,9 @@
             "type": "string"
           },
           "description": {
+            "type": "string"
+          },
+          "link": {
             "type": "string"
           },
           "createdAt": {
@@ -5497,6 +5491,9 @@
                 "description": {
                   "type": "string"
                 },
+                "link": {
+                  "type": "string"
+                },
                 "createdAt": {
                   "type": "string",
                   "format": "date-time"
@@ -5576,8 +5573,6 @@
               "eventType",
               "eventName",
               "eventDate",
-              "firstFloorSize",
-              "totalSize",
               "images"
             ],
             "type": "object",
@@ -5604,13 +5599,16 @@
                 "format": "date"
               },
               "firstFloorSize": {
-                "type": "integer"
+                "type": "number",
+                "format": "float"
               },
               "secondFloorSize": {
-                "type": "integer"
+                "type": "number",
+                "format": "float"
               },
               "totalSize": {
-                "type": "integer"
+                "type": "number",
+                "format": "float"
               },
               "referringCompany": {
                 "type": "string"
@@ -5703,8 +5701,6 @@
           "eventType",
           "eventName",
           "eventDate",
-          "firstFloorSize",
-          "totalSize",
           "images"
         ],
         "properties": {
@@ -5736,13 +5732,16 @@
             "format": "date"
           },
           "firstFloorSize": {
-            "type": "integer"
+            "type": "number",
+            "format": "float"
           },
           "secondFloorSize": {
-            "type": "integer"
+            "type": "number",
+            "format": "float"
           },
           "totalSize": {
-            "type": "integer"
+            "type": "number",
+            "format": "float"
           },
           "referringCompany": {
             "type": "string"
@@ -5763,6 +5762,9 @@
                 "type": "string"
               },
               "description": {
+                "type": "string"
+              },
+              "link": {
                 "type": "string"
               },
               "createdAt": {
@@ -6489,13 +6491,16 @@
                   "format": "date"
                 },
                 "firstFloorSize": {
-                  "type": "integer"
+                  "type": "number",
+                  "format": "float"
                 },
                 "secondFloorSize": {
-                  "type": "integer"
+                  "type": "number",
+                  "format": "float"
                 },
                 "totalSize": {
-                  "type": "integer"
+                  "type": "number",
+                  "format": "float"
                 },
                 "referringCompany": {
                   "type": "string"
